@@ -1,4 +1,3 @@
-# os8
 #include<math.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -19,9 +18,8 @@ int main()
     {
     for(i=0;i<n;i++)
     {
-        index[i]=abs(cp-req[i]); // calculate distance of each request from current position
+        index[i]=abs(cp-req[i]); 
     }
-    // to find the nearest request
     min=index[0];
     mini=0;
     for(i=1;i<n;i++)
@@ -34,16 +32,15 @@ int main()
     }
     a[j]=req[mini];
     j++;
-    cp=req[mini]; // change the current position value to next request
+    cp=req[mini]; 
     req[mini]=999;
-    } // the request that is processed its value is changed so that it is not processed again
-    printf("Sequence is : ");
+    }     printf("Sequence is : ");
     printf("%d",cp1);
-    mov=mov+abs(cp1-a[0]);    // head movement
+    mov=mov+abs(cp1-a[0]);   
     printf(" -> %d",a[0]);
     for(i=1;i<n;i++)
     {
-        mov=mov+abs(a[i]-a[i-1]); ///head movement
+        mov=mov+abs(a[i]-a[i-1]); 
         printf(" -> %d",a[i]);
     }
     printf("\n");
